@@ -1,21 +1,21 @@
 # sql-challenge
 
-insert header image here
+![PostgreSQL](Readme_images/postgresql.png)
 
-Contents
-* Summary
+## Contents
+* [Summary](#summary)
 * Main Task
-* 1. Data Modeling
-* 2. Data Engineering
-* 3. Data Analysis
-* Bonus Task
-* Epilogue Task
-* Dependencies Required
-* Folders
-* Files
+* 1. [Data Modeling]
+* 2. [Data Engineering]
+* 3. [Data Analysis]
+* [Bonus Task]
+* [Epilogue Task]
+* [Dependencies Required]
+* [Folders]
+* [Files]
 
 
-## Summary
+## Summary <a id="summary"></a>
 In this project I was provided with a set of 6 [CSV files](EmployeeSQL/data) containing Data pertaining to a store, such as employee data and departments data.
 
 3 steps needed to be performed:
