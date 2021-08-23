@@ -146,7 +146,7 @@ Search your Employee ID: 499942
 `SELECT * from employees
 WHERE emp_no = '499942';`
 
-![Epilogue](EmployeeSQL/Images/Epilogue.PNG)
+![Epilogue](EmployeeSQL/Images/epilogue.PNG)
 
 
 ## Dependencies Required
