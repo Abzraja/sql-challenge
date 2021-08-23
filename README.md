@@ -60,7 +60,7 @@ FROM employees
 JOIN salaries
 ON employees.emp_no = salaries.emp_no;`
 
-![Query1](EmployeeSQL/Images/Query1.png)
+![Query1](EmployeeSQL/Images/Query1.PNG)
 
 2. List first name, last name, and hire date for employees who were hired in 1986.
 
@@ -68,7 +68,7 @@ ON employees.emp_no = salaries.emp_no;`
 FROM employees
 WHERE hire_date LIKE '%1986';`
 
-![Query2](EmployeeSQL/Images/Query2.png)
+![Query2](EmployeeSQL/Images/Query2.PNG)
 
 3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 
@@ -79,7 +79,7 @@ ON dept_manager.dept_no = departments.dept_no
 JOIN employees
 ON dept_manager.emp_no = employees.emp_no;`
 
-![Query3](EmployeeSQL/Images/Query3.png)
+![Query3](EmployeeSQL/Images/Query3.PNG)
 
 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
@@ -90,7 +90,7 @@ ON dept_emp.dept_no = departments.dept_no
 JOIN employees
 ON dept_emp.emp_no = employees.emp_no;`
 
-![Query4](EmployeeSQL/Images/Query4.png)
+![Query4](EmployeeSQL/Images/Query4.PNG)
 
 
 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
@@ -99,7 +99,7 @@ ON dept_emp.emp_no = employees.emp_no;`
 FROM employees
 WHERE first_name = 'Hercules' and last_name LIKE 'B%';`
 
-![Query5](EmployeeSQL/Images/Query5.png)
+![Query5](EmployeeSQL/Images/Query5.PNG)
 
 
 6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
@@ -112,7 +112,7 @@ JOIN employees
 ON dept_emp.emp_no = employees.emp_no
 WHERE dept_name = 'Sales';`
 
-![Query6](EmployeeSQL/Images/Query6.png)
+![Query6](EmployeeSQL/Images/Query6.PNG)
 
 7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
@@ -124,7 +124,7 @@ JOIN employees
 ON dept_emp.emp_no = employees.emp_no
 WHERE dept_name = 'Sales' or dept_name = 'Development';`
 
-![Query7](EmployeeSQL/Images/Query7.png)
+![Query7](EmployeeSQL/Images/Query7.PNG)
 
 
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
@@ -134,7 +134,7 @@ FROM employees
 GROUP BY last_name
 ORDER BY count_of_name DESC;`
 
-![Query8](EmployeeSQL/Images/Query8.png)
+![Query8](EmployeeSQL/Images/Query8.PNG)
 
 ## Bonus Task
 
@@ -146,7 +146,7 @@ Search your Employee ID: 499942
 `SELECT * from employees
 WHERE emp_no = '499942';`
 
-![Epilogue](EmployeeSQL/Images/Epilogue.png)
+![Epilogue](EmployeeSQL/Images/Epilogue.PNG)
 
 
 ## Dependencies Required
