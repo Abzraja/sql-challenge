@@ -5,14 +5,14 @@
 ## Contents
 * [Summary](#summary)
 * Main Task
-* 1. [Data Modeling]
-* 2. [Data Engineering]
-* 3. [Data Analysis]
-* [Bonus Task]
-* [Epilogue Task]
-* [Dependencies Required]
-* [Folders]
-* [Files]
+* 1. [Data Modeling](#data-modeling)
+* 2. [Data Engineering](#data-engineering)
+* 3. [Data Analysis](#data-analysis)
+* [Bonus Task](#bonus-task)
+* [Epilogue Task](#epilogue-task)
+* [Dependencies Required](#dependencies)
+* [Folders](#folders)
+* [Files](#files)
 
 
 ## Summary <a id="summary"></a>
@@ -25,7 +25,7 @@ In this project I was provided with a set of 6 [CSV files](EmployeeSQL/data) con
 
 ## Main Task:
 
-## Data Modeling
+## Data Modeling <a id="data-modeling"></a>
 The provided [CSV files](EmployeeSQL/data) were inspected to see what kind of data was stored to establish which Data Types and which Relationships needed to be used when creating the Table Schema.
 
 Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](https://www.quickdatabasediagrams.com/) Web App:
@@ -33,7 +33,7 @@ Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](https
 
 ![ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png)
 
-## Data Engineering
+## Data Engineering <a id="data-engineering"></a>
 When creating the diagram the Table Names, Fields, Primary and Foreign Keys, and Data Types and Relationships were entered.
 
 The tool creates an SQL Table Schema which you can export as a SQL file.
@@ -47,7 +47,7 @@ Then I entered the code contained in the Table Schema file into the SQL Query To
 
 Finally, the data from each CSV file was imported to it's relevant SQL Table using the import tool in the pgAdmin software. 
 
-## Data Analysis
+## Data Analysis <a id="data-analysis"></a>
 
 I was given a list of 8 queries to run on the database and had to write the query code to return the information required.
 
@@ -136,11 +136,11 @@ ORDER BY count_of_name DESC;`
 
 ![Query8](EmployeeSQL/Images/Query8.PNG)
 
-## Bonus Task
+## Bonus Task <a id="bonus-task"></a>
 
 
 
-## Epilogue Task
+## Epilogue Task <a id="epilogue-task"></a>
 Search your Employee ID: 499942
 
 `SELECT * from employees
@@ -149,7 +149,7 @@ WHERE emp_no = '499942';`
 ![Epilogue](EmployeeSQL/Images/epilogue.PNG)
 
 
-## Dependencies Required
+## Dependencies Required <a id="dependencies"></a>
 ### Python Environment
 * [Anaconda](https://www.anaconda.com/) - package management system and environment system.
 
@@ -162,13 +162,13 @@ WHERE emp_no = '499942';`
 
 You can also use 'conda install' instead of 'pip install'.
 
-## Software Used
+## Software Used <a id="software"></a>
 * [Quick DBD](https://www.quickdatabasediagrams.com/) Web App
 * [pgAdmin](https://www.pgadmin.org/)
 
 
 
-## Folders
+## Folders <a id="folders"></a>
 * All files aside from this README and images used in the README, are stored in the [EmployeeSQL](EmployeeSQL) folder.
 
 * Images for this README file are stored in the [Readme_images](Readme_images/) folder.
@@ -177,9 +177,7 @@ You can also use 'conda install' instead of 'pip install'.
 
 * The original CSV data files that were imported and processed are stored in the [EmployeeSQL/data](EmployeeSQL/data) folder.
 
-## Files
-
-
+## Files <a id="files"></a>
 
 * QuickDBD-sql-challenge.png
 
