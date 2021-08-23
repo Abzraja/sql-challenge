@@ -4,13 +4,14 @@
 
 ## Contents
 * [Summary](#summary)
-* Main Task
+* [Main Task](#main-task)
 * 1. [Data Modeling](#data-modeling)
 * 2. [Data Engineering](#data-engineering)
 * 3. [Data Analysis](#data-analysis)
 * [Bonus Task](#bonus-task)
 * [Epilogue Task](#epilogue-task)
 * [Dependencies Required](#dependencies)
+* [Software Used](#software)
 * [Folders](#folders)
 * [Files](#files)
 
@@ -23,7 +24,7 @@ In this project I was provided with a set of 6 [CSV files](EmployeeSQL/data) con
 2. Data Engineering
 3. Data Analysis
 
-## Main Task:
+## Main Task: <a id="main-task"></a>
 
 ## Data Modeling <a id="data-modeling"></a>
 The provided [CSV files](EmployeeSQL/data) were inspected to see what kind of data was stored to establish which Data Types and which Relationships needed to be used when creating the Table Schema.
