@@ -17,7 +17,7 @@
 
 
 ## Summary <a id="summary"></a>
-In this project I was provided with a set of 6 [CSV files](EmployeeSQL/data) containing Data pertaining to a store, such as employee data and departments data.
+In this project I was provided with a set of 6 [CSV files](#files) containing Data pertaining to a store, such as employee data and departments data.
 
 3 steps needed to be performed:
 1. Data Modeling
@@ -27,7 +27,7 @@ In this project I was provided with a set of 6 [CSV files](EmployeeSQL/data) con
 ## Main Task: <a id="main-task"></a>
 
 ## Data Modeling <a id="data-modeling"></a>
-The provided [CSV files](EmployeeSQL/data) were inspected to see what kind of data was stored to establish which Data Types and which Relationships needed to be used when creating the Table Schema.
+The provided [CSV files](#files) were inspected to see what kind of data was stored to establish which Data Types and which Relationships needed to be used when creating the Table Schema.
 
 Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](https://www.quickdatabasediagrams.com/) Web App:
 
@@ -159,9 +159,9 @@ WHERE emp_no = '499942';`
 * [Pandas](https://pypi.org/project/pandas/) `pip install pandas`
 * [Matplotlib](https://pypi.org/project/matplotlib/) `pip install matplotlib`
 * [SQLAlchemy](https://pypi.org/project/SQLAlchemy/) `pip install SQLAlchemy`
-* [Psycopg2](https://pypi.org/project/psycopg2/) `pip install psycopg2`
+* [Psycopg2](https://pypi.org/project/psycopg2/) `pip install psycopg2 -binary`
 
-You can also use 'conda install' instead of 'pip install'.
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
 ## Software Used <a id="software"></a>
 * [Quick DBD](https://www.quickdatabasediagrams.com/) Web App
@@ -180,6 +180,7 @@ You can also use 'conda install' instead of 'pip install'.
 
 ## Files <a id="files"></a>
 
+* [Main Data CSV files](EmployeeSQL/data)
 * QuickDBD-sql-challenge.png
 
 
