@@ -19,10 +19,13 @@
 ## Summary <a id="summary"></a>
 In this project I was provided with a set of 6 [CSV files](#files) containing Data pertaining to a store, such as employee data and departments data.
 
-3 steps needed to be performed:
-1. Data Modeling
-2. Data Engineering
-3. Data Analysis
+A set of 8 queries were provided. In order to query the database with these queries to return the required information, 3 steps needed to be performed:
+1. [Data Modeling](#data-modeling)
+2. [Data Engineering](#data-engineering)
+3. [Data Analysis](#data-analysis)
+
+All of the files containing the code for the Table Schema, SQL Queries and Bonus Task are referenced in the [Files](#files) section.
+
 
 ## Main Task: <a id="main-task"></a>
 
@@ -35,7 +38,7 @@ Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](https
 ![ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png)
 
 ## Data Engineering <a id="data-engineering"></a>
-When creating the diagram the Table Names, Fields, Primary and Foreign Keys, and Data Types and Relationships were entered.
+When creating the diagram the Table Names, Fields, Primary and Foreign Keys, Data Types, and Relationships, were entered.
 
 The tool creates an SQL Table Schema which you can export as a SQL file.
 
@@ -139,6 +142,59 @@ ORDER BY count_of_name DESC;`
 
 ## Bonus Task <a id="bonus-task"></a>
 
+The code for this secition is contained within the [SQL-Alchemy .ipynb](#sql-alchemy-notebook) Jupyter Notebook file contained in the repository.
+
+I created a [Config.py](#config) file and entered the username and password of my locally hosted PostgreSQL server into a variable in this file. The Config .py file was then referenced in the .gitignore file so the user name and password is not pushed to the repository.
+
+The section required the use of the [SQLAlchemy](#sqlalchemy) package to connect to the PostgreSQL database so that data could be extracted and manipulated using Pandas.
+
+Once the data was imported into Pandas DataFrames I had to create a Histogram plot of Employee Salaries.
+
+![Employee Salary Histogram](EmployeeSQL/Images/Employee-Salary-Histogram.png)
+
+And I also had to create a bar plot of Average Salary by Title.
+
+![Average Salary by Title Bar Plot](EmployeeSQL/Images/Salary-Title-Bar.png)
+
+The code for these plots is below:
+
+Using Jupyter notebook I first imported dependencies, including the variable from the config file containing the user and pass for the local PostgreSQL server.
+
+The database_name variable should contain the name of the database in your server where the tables in this project were created.
+
+Once the database connection was made using SQL Alchemy
+
+I used the pd.read_sql function to read the Salary Table from the local PostgreSQL database into a Pandas DataFrame.
+
+![sql-pandas-dataframe](EmployeeSQL/Images/sql-pandas-dataframe.png)
+
+Then using the Pandas dataframe plot function I was able to plot a histogram of employee salaries from the Data in the Salary DataFrame.
+
+![pandas-histogram](EmployeeSQL/Images/emp-sal-hist-notebook.png)
+
+I then had to create a bar plot of Average Salary by Employee Title.
+
+For this I imported the Employee and Title SQL tables into their own Pandas DataFrames.
+![Employee and Title Import](EmployeeSQL/Images/emp-title-import.png)
+
+Then I used the Pandas Merge function to merge the Employee DataFame with the with Title DataFrame on the title_id column.
+![First Merge](EmployeeSQL/Images/first-merge.png)
+
+Then this newly merged DataFrame was merged again with the Salary DataFrame on the emp_no column.
+
+![Second Merge](EmployeeSQL/Images/second-merge.png)
+
+The final merged DataFrame contained all the fields necessary to created a plot of the Average Salary By Title.
+
+I had to use the .groupby function to group by Title.
+
+Then used the .mean function on the groupby to get the average salary for each title.
+
+Finally I was able to use the Pandas .plot function to create a bar plot of the Average Salaries By Title.
+
+![Salary by Title Bar plot](EmployeeSQL/Images/salary-title-notebook.png)
+
+
 
 
 ## Epilogue Task <a id="epilogue-task"></a>
@@ -158,14 +214,22 @@ WHERE emp_no = '499942';`
 * [Jupyter Notebook](https://jupyter.org/) `pip install notebook`
 * [Pandas](https://pypi.org/project/pandas/) `pip install pandas`
 * [Matplotlib](https://pypi.org/project/matplotlib/) `pip install matplotlib`
-* [SQLAlchemy](https://pypi.org/project/SQLAlchemy/) `pip install SQLAlchemy`
+* [SQLAlchemy](https://pypi.org/project/SQLAlchemy/) <a id="sqlalchemy"></a> `pip install SQLAlchemy`
 * [Psycopg2](https://pypi.org/project/psycopg2/) `pip install psycopg2 -binary`
-
-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
 ## Software Used <a id="software"></a>
 * [Quick DBD](https://www.quickdatabasediagrams.com/) Web App
 * [pgAdmin](https://www.pgadmin.org/)
+
+
+### Config File <a id="config"></a>
+You will also need to create "Config.py" inside the EmployeeSQL folder. The file should contain a variable called 'user' which contains your local PostgreSQL server username and password.
+
+![Config File](EmployeeSQL/Images/config.png)
+
+This file is referenced in the .gitignore file so it's not pushed to the repository.
+
+
 
 
 
@@ -181,7 +245,16 @@ WHERE emp_no = '499942';`
 ## Files <a id="files"></a>
 
 * [Main Data CSV files](EmployeeSQL/data)
-* QuickDBD-sql-challenge.png
+
+* [ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png) - QuickDBD-sql-challenge.png
+
+* [Table Schema SQL](EmployeeSQL/QuickDBD-sql-challenge.sql) - QuickDBD-sql-challenge.sql
+
+* [8 SQL Queries](EmployeeSQL/SQL-Queries.sql) - SQL-Queries.sql
+
+* [Bonus Task Code](EmployeeSQL/SQL-Alchemy.ipynb) <a id="sql-alchemy-notebook"></a> - SQL-Alchemy.ipynb (Jupyter Notebook file) 
+
+
 
 
 
