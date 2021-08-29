@@ -29,7 +29,7 @@ All of the files containing the code for the Table Schema, SQL Queries and Bonus
 
 ## Main Task: <a id="main-task"></a>
 
-## Data Modeling <a id="data-modeling"></a>
+## i. Data Modeling <a id="data-modeling"></a>
 The provided [CSV files](#files) were inspected to see what kind of data was stored to establish which Data Types and which Relationships needed to be used when creating the Table Schema.
 
 Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](#quickdbd) Web App:
@@ -37,7 +37,7 @@ Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](#quic
 
 ![ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png)
 
-## Data Engineering <a id="data-engineering"></a>
+## ii. Data Engineering <a id="data-engineering"></a>
 When creating the diagram the Table Names, Fields, Primary and Foreign Keys, Data Types, and Relationships, were entered.
 
 The tool creates an SQL Table Schema which you can export as a SQL file. The resulting [Table Schema](#schema) for my diagram.
@@ -49,7 +49,7 @@ Then I entered the code contained in the Table Schema file into the SQL Query To
 
 Finally, the data from each CSV file was imported to it's relevant SQL Table using the import tool in the pgAdmin software. 
 
-## Data Analysis <a id="data-analysis"></a>
+## iii. Data Analysis <a id="data-analysis"></a>
 
 I was given a list of 8 set of information required and to had to create SQL Queries to run on the database to return the information required.
 
