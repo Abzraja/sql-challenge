@@ -19,7 +19,7 @@
 ## Summary <a id="summary"></a>
 In this project I was provided with a set of 6 [CSV files](#files) containing Data pertaining to a store, such as employee data and departments data.
 
-A set of 8 queries were provided. In order to query the database with these queries to return the required information, 3 steps needed to be performed:
+8 sets of information were required. In order to query the database to return the required information, 3 steps needed to be performed:
 1. [Data Modeling](#data-modeling)
 2. [Data Engineering](#data-engineering)
 3. [Data Analysis](#data-analysis)
@@ -32,7 +32,7 @@ All of the files containing the code for the Table Schema, SQL Queries and Bonus
 ## Data Modeling <a id="data-modeling"></a>
 The provided [CSV files](#files) were inspected to see what kind of data was stored to establish which Data Types and which Relationships needed to be used when creating the Table Schema.
 
-Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](https://www.quickdatabasediagrams.com/) Web App:
+Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](#quickdbd) Web App:
 
 
 ![ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png)
@@ -40,12 +40,10 @@ Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](https
 ## Data Engineering <a id="data-engineering"></a>
 When creating the diagram the Table Names, Fields, Primary and Foreign Keys, Data Types, and Relationships, were entered.
 
-The tool creates an SQL Table Schema which you can export as a SQL file.
-
-The resulting [Table Schema](EmployeeSQL/QuickDBD-sql-challenge.sql) for my diagram.
+The tool creates an SQL Table Schema which you can export as a SQL file. The resulting [Table Schema](#schema) for my diagram.
 
 
-I created a PostgreSQL database using [pgAdmin](https://www.pgadmin.org/).
+I created a PostgreSQL database using [pgAdmin](#pgadmin).
 
 Then I entered the code contained in the Table Schema file into the SQL Query Tool and ran the Query to generate the Tables in the database.
 
@@ -53,7 +51,7 @@ Finally, the data from each CSV file was imported to it's relevant SQL Table usi
 
 ## Data Analysis <a id="data-analysis"></a>
 
-I was given a list of 8 queries to run on the database and had to write the query code to return the information required.
+I was given a list of 8 set of information required and to had to create SQL Queries to run on the database to return the information required.
 
 Each query, code and output is shown below:
 
@@ -142,11 +140,11 @@ ORDER BY count_of_name DESC;`
 
 ## Bonus Task <a id="bonus-task"></a>
 
-The code for this secition is contained within the [SQL-Alchemy .ipynb](#sql-alchemy-notebook) Jupyter Notebook file contained in the repository.
+The code for this section is contained within the [SQL-Alchemy .ipynb](#sql-alchemy-notebook) Jupyter Notebook file contained in the repository.
 
 I created a [Config.py](#config) file and entered the username and password of my locally hosted PostgreSQL server into a variable in this file. The Config .py file was then referenced in the .gitignore file so the user name and password is not pushed to the repository.
 
-The section required the use of the [SQLAlchemy](#sqlalchemy) package to connect to the PostgreSQL database so that data could be extracted and manipulated using Pandas.
+The section required the use of the [SQLAlchemy](#sqlalchemy) package to connect to the PostgreSQL database so that data could be extracted and manipulated using [Pandas](#pandas).
 
 Once the data was imported into Pandas DataFrames I had to create a Histogram plot of Employee Salaries.
 
@@ -158,13 +156,13 @@ And I also had to create a bar plot of Average Salary by Title.
 
 The code for these plots is below:
 
-Using Jupyter notebook I first imported dependencies, including the variable from the config file containing the user and pass for the local PostgreSQL server.
+Using [Jupyter notebook](#jupyter-notebook) I first imported dependencies, including the variable from the [config](#config) file containing the user and pass for the local PostgreSQL server.
 
 The database_name variable should contain the name of the database in your server where the tables in this project were created.
 
-Once the database connection was made using SQL Alchemy
+Once the database connection was made using SQL Alchemy:
 
-I used the pd.read_sql function to read the Salary Table from the local PostgreSQL database into a Pandas DataFrame.
+I used the 'pd.read_sql' function to read the Salary Table from the local PostgreSQL database into a Pandas DataFrame.
 
 ![sql-pandas-dataframe](EmployeeSQL/Images/sql-pandas-dataframe.png)
 
@@ -184,7 +182,7 @@ Then this newly merged DataFrame was merged again with the Salary DataFrame on t
 
 ![Second Merge](EmployeeSQL/Images/second-merge.png)
 
-The final merged DataFrame contained all the fields necessary to created a plot of the Average Salary By Title.
+The final merged DataFrame contained all the fields necessary to create a plot of the Average Salary By Title.
 
 I had to use the .groupby function to group by Title.
 
@@ -211,15 +209,15 @@ WHERE emp_no = '499942';`
 * [Anaconda](https://www.anaconda.com/) - package management system and environment system.
 
 ### Packages
-* [Jupyter Notebook](https://jupyter.org/) `pip install notebook`
-* [Pandas](https://pypi.org/project/pandas/) `pip install pandas`
+* [Jupyter Notebook](https://jupyter.org/) `pip install notebook` <a id="jupyter-notebook"></a>
+* [Pandas](https://pypi.org/project/pandas/) `pip install pandas` <a id="pandas"></a>
 * [Matplotlib](https://pypi.org/project/matplotlib/) `pip install matplotlib`
 * [SQLAlchemy](https://pypi.org/project/SQLAlchemy/) <a id="sqlalchemy"></a> `pip install SQLAlchemy`
 * [Psycopg2](https://pypi.org/project/psycopg2/) `pip install psycopg2 -binary`
 
 ## Software Used <a id="software"></a>
-* [Quick DBD](https://www.quickdatabasediagrams.com/) Web App
-* [pgAdmin](https://www.pgadmin.org/)
+* [Quick DBD](https://www.quickdatabasediagrams.com/) <a id="quickdbd"></a> Web App
+* [pgAdmin](https://www.pgadmin.org/) <a id="pgadmin"></a>
 
 
 ### Config File <a id="config"></a>
@@ -248,7 +246,7 @@ This file is referenced in the .gitignore file so it's not pushed to the reposit
 
 * [ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png) - QuickDBD-sql-challenge.png
 
-* [Table Schema SQL](EmployeeSQL/QuickDBD-sql-challenge.sql) - QuickDBD-sql-challenge.sql
+* [Table Schema SQL](EmployeeSQL/QuickDBD-sql-challenge.sql) - QuickDBD-sql-challenge.sql <a id="schema"></a>
 
 * [8 SQL Queries](EmployeeSQL/SQL-Queries.sql) - SQL-Queries.sql
 
