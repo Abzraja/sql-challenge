@@ -204,7 +204,15 @@ You will also need to create "Config.py" inside the EmployeeSQL folder. The file
 This file is referenced in the .gitignore file so it's not pushed to the repository.
 
 
+<br />
+<br />
+<hr />
+<br />
 
+<img width="150" src="https://drive.google.com/uc?export=view&id=1OH_TvDjISYpoKL_98Jx3CDFPM7Xp8J6H">
+
+### Abz Raja
+abzraja@gmail.com
 
 
 
