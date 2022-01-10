@@ -21,15 +21,13 @@ In this project I was provided with a set of 6 [CSV files](#files) containing Da
 2. [Data Engineering](#data-engineering)
 3. [Data Analysis](#data-analysis)
 
-All of the files containing the code for the Table Schema, SQL Queries and Bonus Task are referenced in the [Files](#files) section.
-
 
 ## Main Task: <a id="main-task"></a>
 
 ## i. Data Modeling <a id="data-modeling"></a>
 The provided [CSV files](#files) were inspected to see what kind of data was stored to establish which Data Types and which Relationships needed to be used when creating the Table Schema.
 
-Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](#quickdbd) Web App:
+Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](https://www.quickdatabasediagrams.com/) Web App:
 
 
 ![ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png)
@@ -37,10 +35,10 @@ Then an ERD (Entity Relationship Diagram) was created using the [QuickDBD](#quic
 ## ii. Data Engineering <a id="data-engineering"></a>
 When creating the diagram the Table Names, Fields, Primary and Foreign Keys, Data Types, and Relationships, were entered.
 
-The tool creates an SQL Table Schema which you can export as a SQL file. The resulting [Table Schema](#schema) for my diagram.
+The tool creates an SQL Table Schema which you can export as a SQL file. The exported file is in the SQL Queries folder.
 
 
-I created a PostgreSQL database using [pgAdmin](#pgadmin).
+I created a PostgreSQL database using [pgAdmin](https://www.pgadmin.org/).
 
 Then I entered the code contained in the Table Schema file into the SQL Query Tool and ran the Query to generate the Tables in the database.
 
