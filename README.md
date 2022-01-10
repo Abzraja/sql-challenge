@@ -1,6 +1,6 @@
-# sql-challenge
+# SQL - Data Modeling, Engineering and Analysis
 
-![PostgreSQL](Readme_images/postgresql.png)
+![PostgreSQL](EmployeeSQL/Images/postgresql.png)
 
 ## Contents
 * [Summary](#summary)
@@ -8,12 +8,9 @@
 * 1. [Data Modeling](#data-modeling)
 * 2. [Data Engineering](#data-engineering)
 * 3. [Data Analysis](#data-analysis)
-* [Bonus Task](#bonus-task)
-* [Epilogue Task](#epilogue-task)
+* [SQL Alchemy](#sql-alchemy)
 * [Dependencies Required](#dependencies)
-* [Software Used](#software)
-* [Folders](#folders)
-* [Files](#files)
+
 
 
 ## Summary <a id="summary"></a>
@@ -138,7 +135,7 @@ ORDER BY count_of_name DESC;`
 
 ![Query8](EmployeeSQL/Images/Query8.PNG)
 
-## Bonus Task <a id="bonus-task"></a>
+## SQL Alchemy <a id="sql-alchemy"></a>
 
 The code for this section is contained within the [SQL-Alchemy .ipynb](#sql-alchemy-notebook) Jupyter Notebook file contained in the repository.
 
@@ -194,30 +191,9 @@ Finally I was able to use the Pandas .plot function to create a bar plot of the 
 
 
 
-
-## Epilogue Task <a id="epilogue-task"></a>
-Search your Employee ID: 499942
-
-`SELECT * from employees
-WHERE emp_no = '499942';`
-
-![Epilogue](EmployeeSQL/Images/epilogue.PNG)
-
-
 ## Dependencies Required <a id="dependencies"></a>
-### Python Environment
-* [Anaconda](https://www.anaconda.com/) - package management system and environment system.
-
 ### Packages
-* [Jupyter Notebook](https://jupyter.org/) `pip install notebook` <a id="jupyter-notebook"></a>
-* [Pandas](https://pypi.org/project/pandas/) `pip install pandas` <a id="pandas"></a>
-* [Matplotlib](https://pypi.org/project/matplotlib/) `pip install matplotlib`
-* [SQLAlchemy](https://pypi.org/project/SQLAlchemy/) <a id="sqlalchemy"></a> `pip install SQLAlchemy`
-* [Psycopg2](https://pypi.org/project/psycopg2/) `pip install psycopg2 -binary`
-
-## Software Used <a id="software"></a>
-* [Quick DBD](https://www.quickdatabasediagrams.com/) <a id="quickdbd"></a> Web App
-* [pgAdmin](https://www.pgadmin.org/) <a id="pgadmin"></a>
+* Packages used are in the requirements.txt.
 
 
 ### Config File <a id="config"></a>
@@ -226,31 +202,6 @@ You will also need to create "Config.py" inside the EmployeeSQL folder. The file
 ![Config File](EmployeeSQL/Images/config.png)
 
 This file is referenced in the .gitignore file so it's not pushed to the repository.
-
-
-
-
-
-## Folders <a id="folders"></a>
-* All files aside from this README and images used in the README, are stored in the [EmployeeSQL](EmployeeSQL) folder.
-
-* Images for this README file are stored in the [Readme_images](Readme_images/) folder.
-
-* Any diagrams or plots outputted via the code are stored in the [EmployeeSQL/Images](EmployeeSQL/images) folder.
-
-* The original CSV data files that were imported and processed are stored in the [EmployeeSQL/data](EmployeeSQL/data) folder.
-
-## Files <a id="files"></a>
-
-* [Main Data CSV files](EmployeeSQL/data)
-
-* [ERD Diagram](EmployeeSQL/Images/QuickDBD-sql-challenge.png) - QuickDBD-sql-challenge.png
-
-* [Table Schema SQL](EmployeeSQL/QuickDBD-sql-challenge.sql) - QuickDBD-sql-challenge.sql <a id="schema"></a>
-
-* [8 SQL Queries](EmployeeSQL/SQL-Queries.sql) - SQL-Queries.sql
-
-* [Bonus Task Code](EmployeeSQL/SQL-Alchemy.ipynb) <a id="sql-alchemy-notebook"></a> - SQL-Alchemy.ipynb (Jupyter Notebook file) 
 
 
 
